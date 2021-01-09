@@ -7,36 +7,36 @@ Node JS, MongoDB, and angular CLI (v9 or greater) must be installed on your mach
 
 #Clone the project
 
-download or clone the project from
+download or clone the project from https://github.com/amjad087/todo-mean.git
 
 # clone
 
- git clone https://github.com/amjad087/todo-mean.git
+ 	git clone https://github.com/amjad087/todo-mean.git
 
 # Running the Server (Node JS)
 
-open terminal
+	open terminal
 
-cd todo-mean/server
+	cd todo-mean/server
 
-npm install
+	npm install
 
-npm start
+	npm start
 
 	OR
 
-npm run start:dev (for nodemon in case of any changes, it will restart the server)
+	npm run start:dev (for nodemon in case of any changes, it will restart the server)
 
 
 #Running the front ent (Angular 9)
 
-open terminal
+	open terminal
 
-cd todo-mean
+	cd todo-mean
 
-npm install
+	npm install
 
-ng serve -o
+	ng serve -o
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
