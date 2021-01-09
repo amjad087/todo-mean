@@ -1,0 +1,31 @@
+<mat-card>
+  <form [formGroup] = "form" (ngSubmit) = "onAddItem()">
+    <mat-form-field class="example-full-width">
+      <input
+      type="text"
+      matInput
+      name="title"
+      formControlName="title"
+      placeholder="title">
+      <mat-error *ngIf="form.get('title').touched && form.get('title').invalid"> Please provide a valid Title!</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        type="body"
+        matInput
+        name="body"
+        formControlName="body"
+        placeholder="body">
+      <mat-error *ngIf="form.get('body').touched && form.get('body').invalid"> Please provide a valid body!</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Select Day</mat-label>
+      <mat-select formControlName ="selectDay">
+        <mat-option [value]="option.value" *ngFor="let option of weekDays">{{option.value}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <button type="submit" color = "primary" mat-raised-button>{{mode === 'create' ? "Add Item" : "Edit Item"}}</button> |
+    <button type="button" color = "warn" mat-raised-button (click) = "onCancel()">Cancel</button>
+  </form>
+</mat-card>
