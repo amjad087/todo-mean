@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  frontend:
+    build: todo-mean
+    ports:
+      - '4200:4200'
+  backend:
+    build: todo-mean/server
+    ports:
+      - '3000:3000'
+
+    links:
+      - database
+
+  database:
+    image: mongo
+    ports:
+      - '27017:27017'
+
+  

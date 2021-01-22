@@ -6,4 +6,4 @@ RUN npm install
 COPY . ./
 
 EXPOSE 4200
-CMD ["/bin/bash", "-c", "ng serve --host 0.0.0.0"]
+CMD [ "npm", "start" ]
