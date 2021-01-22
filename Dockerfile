@@ -8,5 +8,5 @@ RUN npm run build --prod
 ### STAGE 2: Run ###
 FROM nginx
 RUN rm /etc/nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY content /usr/share/nginx/html
-COPY conf /etc/nginx
+COPY --from=build /usr/src/app/dist/todo /usr/share/nginx/html
+COPY ./nginx/nginx.conf /etc/nginx
